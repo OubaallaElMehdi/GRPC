@@ -271,7 +271,7 @@ org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure whil
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.0.jar:3.4.0]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.0.jar:3.4.0]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.0.jar:3.4.0]
-	at com.example.Grpc.GrpcServiceApplication.main(GrpcServiceApplication.java:10) ~[classes/:na]
+	at ma.projet.grpc.GrpcServiceApplication.main(GrpcServiceApplication.java:10) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.0.jar:3.4.0]
@@ -355,11 +355,11 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.0.jar:3.4.0]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.0.jar:3.4.0]
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.0.jar:3.4.0]
-	at com.example.Grpc.GrpcServiceApplication.main(GrpcServiceApplication.java:10) ~[classes/:na]
+	at ma.projet.grpc.GrpcServiceApplication.main(GrpcServiceApplication.java:10) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.0.jar:3.4.0]
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.example.Grpc.controllers.CompteServiceImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@731e6ae8]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [controllers.ma.projet.grpc.CompteServiceImpl] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@731e6ae8]
 	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-6.2.0.jar:6.2.0]
 	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-6.2.0.jar:6.2.0]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:476) ~[spring-beans-6.2.0.jar:6.2.0]
@@ -478,12 +478,62 @@ Database is already closed (to disable automatic closing at VM shutdown, add ";D
 2024-12-07T22:54:28.513+01:00 DEBUG 36852 --- [GrpcService] [main] b.g.c.a.GrpcCommonCodecAutoConfiguration : Found GrpcCodecDiscoverer -> Creating custom DecompressorRegistry
 2024-12-07T22:54:28.529+01:00  INFO 36852 --- [GrpcService] [main] g.s.a.GrpcServerFactoryAutoConfiguration : Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
 2024-12-07T22:54:28.568+01:00 DEBUG 36852 --- [GrpcService] [main] otationGlobalServerInterceptorConfigurer : Registering GlobalServerInterceptor: grpcRequestScope (net.devh.boot.grpc.server.scope.GrpcRequestScope@3601549f)
-2024-12-07T22:54:28.573+01:00 DEBUG 36852 --- [GrpcService] [main] .b.g.s.s.AnnotationGrpcServiceDiscoverer : Found gRPC service: CompteService, bean: compteServiceImpl, class: com.example.Grpc.controllers.CompteServiceImpl
+2024-12-07T22:54:28.573+01:00 DEBUG 36852 --- [GrpcService] [main] .b.g.s.s.AnnotationGrpcServiceDiscoverer : Found gRPC service: CompteService, bean: compteServiceImpl, class: controllers.ma.projet.grpc.CompteServiceImpl
 2024-12-07T22:54:28.575+01:00 DEBUG 36852 --- [GrpcService] [main] .b.g.s.s.AnnotationGrpcServiceDiscoverer : Found gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.protobuf.services.HealthServiceImpl
 2024-12-07T22:54:28.581+01:00 DEBUG 36852 --- [GrpcService] [main] .b.g.s.s.AnnotationGrpcServiceDiscoverer : Found gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
 2024-12-07T22:54:28.715+01:00  INFO 36852 --- [GrpcService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-12-07T22:54:28.806+01:00  INFO 36852 --- [GrpcService] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: CompteService, bean: compteServiceImpl, class: com.example.Grpc.controllers.CompteServiceImpl
+2024-12-07T22:54:28.806+01:00  INFO 36852 --- [GrpcService] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: CompteService, bean: compteServiceImpl, class: controllers.ma.projet.grpc.CompteServiceImpl
 2024-12-07T22:54:28.806+01:00  INFO 36852 --- [GrpcService] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.protobuf.services.HealthServiceImpl
 2024-12-07T22:54:28.807+01:00  INFO 36852 --- [GrpcService] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
 2024-12-07T22:54:28.923+01:00  INFO 36852 --- [GrpcService] [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9090
 2024-12-07T22:54:28.928+01:00  INFO 36852 --- [GrpcService] [main] c.example.Grpc.GrpcServiceApplication    : Started GrpcServiceApplication in 2.703 seconds (process running for 3.21)
+2024-12-07T23:52:30.297+01:00 DEBUG 36852 --- [GrpcService] [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : Initiating gRPC server shutdown
+2024-12-07T23:52:30.309+01:00  INFO 36852 --- [GrpcService] [SpringApplicationShutdownHook] n.d.b.g.s.s.GrpcServerLifecycle          : Completed gRPC server shutdown
+2024-12-07T23:52:30.311+01:00  INFO 36852 --- [GrpcService] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-07T23:52:30.319+01:00  INFO 36852 --- [GrpcService] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2024-12-07T23:52:30.326+01:00  INFO 36852 --- [GrpcService] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-07T23:52:30.330+01:00  INFO 36852 --- [GrpcService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-12-07T23:52:30.333+01:00  INFO 36852 --- [GrpcService] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-12-07T23:56:42.066+01:00  INFO 29996 --- [GrpcService] [main] ma.projet.grpc.GrpcServiceApplication    : Starting GrpcServiceApplication using Java 21.0.4 with PID 29996 (C:\Users\smolv\Downloads\GrpcService\target\classes started by smolv in C:\Users\smolv\Downloads\GrpcService)
+2024-12-07T23:56:42.068+01:00  INFO 29996 --- [GrpcService] [main] ma.projet.grpc.GrpcServiceApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-12-07T23:56:42.554+01:00  INFO 29996 --- [GrpcService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-07T23:56:42.616+01:00  INFO 29996 --- [GrpcService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interface.
+2024-12-07T23:56:42.968+01:00  INFO 29996 --- [GrpcService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-12-07T23:56:42.978+01:00  INFO 29996 --- [GrpcService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-12-07T23:56:42.979+01:00  INFO 29996 --- [GrpcService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-07T23:56:43.024+01:00  INFO 29996 --- [GrpcService] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-12-07T23:56:43.025+01:00  INFO 29996 --- [GrpcService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 928 ms
+2024-12-07T23:56:43.117+01:00  INFO 29996 --- [GrpcService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-12-07T23:56:43.261+01:00  INFO 29996 --- [GrpcService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2024-12-07T23:56:43.263+01:00  INFO 29996 --- [GrpcService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-12-07T23:56:43.305+01:00  INFO 29996 --- [GrpcService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-07T23:56:43.361+01:00  INFO 29996 --- [GrpcService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2024-12-07T23:56:43.391+01:00  INFO 29996 --- [GrpcService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-12-07T23:56:43.619+01:00  INFO 29996 --- [GrpcService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-07T23:56:43.665+01:00  WARN 29996 --- [GrpcService] [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-12-07T23:56:43.677+01:00  INFO 29996 --- [GrpcService] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2024-12-07T23:56:44.304+01:00  INFO 29996 --- [GrpcService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-07T23:56:44.330+01:00  INFO 29996 --- [GrpcService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-07T23:56:44.578+01:00  WARN 29996 --- [GrpcService] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-07T23:56:44.735+01:00 DEBUG 29996 --- [GrpcService] [main] b.g.c.a.GrpcCommonCodecAutoConfiguration : Found GrpcCodecDiscoverer -> Creating custom CompressorRegistry
+2024-12-07T23:56:44.736+01:00 DEBUG 29996 --- [GrpcService] [main] .d.b.g.c.c.AnnotationGrpcCodecDiscoverer : Searching for codecs...
+2024-12-07T23:56:44.743+01:00 DEBUG 29996 --- [GrpcService] [main] .d.b.g.c.c.AnnotationGrpcCodecDiscoverer : Done
+2024-12-07T23:56:44.748+01:00 DEBUG 29996 --- [GrpcService] [main] b.g.c.a.GrpcCommonCodecAutoConfiguration : Found GrpcCodecDiscoverer -> Creating custom DecompressorRegistry
+2024-12-07T23:56:44.768+01:00  INFO 29996 --- [GrpcService] [main] g.s.a.GrpcServerFactoryAutoConfiguration : Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2024-12-07T23:56:44.811+01:00 DEBUG 29996 --- [GrpcService] [main] otationGlobalServerInterceptorConfigurer : Registering GlobalServerInterceptor: grpcRequestScope (net.devh.boot.grpc.server.scope.GrpcRequestScope@4cddc3d9)
+2024-12-07T23:56:44.816+01:00 DEBUG 29996 --- [GrpcService] [main] .b.g.s.s.AnnotationGrpcServiceDiscoverer : Found gRPC service: CompteService, bean: compteServiceImpl, class: ma.projet.grpc.controllers.CompteServiceImpl
+2024-12-07T23:56:44.818+01:00 DEBUG 29996 --- [GrpcService] [main] .b.g.s.s.AnnotationGrpcServiceDiscoverer : Found gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.protobuf.services.HealthServiceImpl
+2024-12-07T23:56:44.822+01:00 DEBUG 29996 --- [GrpcService] [main] .b.g.s.s.AnnotationGrpcServiceDiscoverer : Found gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2024-12-07T23:56:44.933+01:00  INFO 29996 --- [GrpcService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-12-07T23:56:44.985+01:00  INFO 29996 --- [GrpcService] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: CompteService, bean: compteServiceImpl, class: ma.projet.grpc.controllers.CompteServiceImpl
+2024-12-07T23:56:44.986+01:00  INFO 29996 --- [GrpcService] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.protobuf.services.HealthServiceImpl
+2024-12-07T23:56:44.986+01:00  INFO 29996 --- [GrpcService] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2024-12-07T23:56:45.087+01:00  INFO 29996 --- [GrpcService] [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9090
+2024-12-07T23:56:45.092+01:00  INFO 29996 --- [GrpcService] [main] ma.projet.grpc.GrpcServiceApplication    : Started GrpcServiceApplication in 3.343 seconds (process running for 3.82)

@@ -89,6 +89,31 @@ public final class CompteServiceOuterClass {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_GetComptesByTypeResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_SearchComptesByDateRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_SearchComptesByDateRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_SearchComptesByDateResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_SearchComptesByDateResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_GetSummaryRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_GetSummaryRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_TypeCompteSummary_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_TypeCompteSummary_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_GetSummaryResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_GetSummaryResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -117,18 +142,28 @@ public final class CompteServiceOuterClass {
       "onse\022\017\n\007success\030\001 \001(\010\"4\n\027GetComptesByTyp" +
       "eRequest\022\031\n\004type\030\001 \001(\0162\013.TypeCompte\"4\n\030G" +
       "etComptesByTypeResponse\022\030\n\007comptes\030\001 \003(\013" +
-      "2\007.Compte*&\n\nTypeCompte\022\013\n\007COURANT\020\000\022\013\n\007" +
-      "EPARGNE\020\0012\203\003\n\rCompteService\022;\n\nAllCompte" +
-      "s\022\025.GetAllComptesRequest\032\026.GetAllComptes" +
-      "Response\022;\n\nCompteById\022\025.GetCompteByIdRe" +
-      "quest\032\026.GetCompteByIdResponse\022;\n\nTotalSo" +
-      "lde\022\025.GetTotalSoldeRequest\032\026.GetTotalSol" +
-      "deResponse\0225\n\nSaveCompte\022\022.SaveCompteReq" +
-      "uest\032\023.SaveCompteResponse\022;\n\014DeleteCompt" +
-      "e\022\024.DeleteCompteRequest\032\025.DeleteCompteRe" +
-      "sponse\022G\n\020GetComptesByType\022\030.GetComptesB" +
-      "yTypeRequest\032\031.GetComptesByTypeResponseB" +
-      "\030\n\024ma.projet.grpc.stubsP\001b\006proto3"
+      "2\007.Compte\"2\n\032SearchComptesByDateRequest\022" +
+      "\024\n\014dateCreation\030\001 \001(\t\"7\n\033SearchComptesBy" +
+      "DateResponse\022\030\n\007comptes\030\001 \003(\0132\007.Compte\"\023" +
+      "\n\021GetSummaryRequest\"=\n\021TypeCompteSummary" +
+      "\022\031\n\004type\030\001 \001(\0162\013.TypeCompte\022\r\n\005count\030\002 \001" +
+      "(\005\";\n\022GetSummaryResponse\022%\n\tsummaries\030\001 " +
+      "\003(\0132\022.TypeCompteSummary*&\n\nTypeCompte\022\013\n" +
+      "\007COURANT\020\000\022\013\n\007EPARGNE\020\0012\214\004\n\rCompteServic" +
+      "e\022P\n\023SearchComptesByDate\022\033.SearchComptes" +
+      "ByDateRequest\032\034.SearchComptesByDateRespo" +
+      "nse\0225\n\nGetSummary\022\022.GetSummaryRequest\032\023." +
+      "GetSummaryResponse\022;\n\nAllComptes\022\025.GetAl" +
+      "lComptesRequest\032\026.GetAllComptesResponse\022" +
+      ";\n\nCompteById\022\025.GetCompteByIdRequest\032\026.G" +
+      "etCompteByIdResponse\022;\n\nTotalSolde\022\025.Get" +
+      "TotalSoldeRequest\032\026.GetTotalSoldeRespons" +
+      "e\0225\n\nSaveCompte\022\022.SaveCompteRequest\032\023.Sa" +
+      "veCompteResponse\022;\n\014DeleteCompte\022\024.Delet" +
+      "eCompteRequest\032\025.DeleteCompteResponse\022G\n" +
+      "\020GetComptesByType\022\030.GetComptesByTypeRequ" +
+      "est\032\031.GetComptesByTypeResponseB\030\n\024ma.pro" +
+      "jet.grpc.stubsP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -224,6 +259,36 @@ public final class CompteServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_GetComptesByTypeResponse_descriptor,
         new java.lang.String[] { "Comptes", });
+    internal_static_SearchComptesByDateRequest_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_SearchComptesByDateRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_SearchComptesByDateRequest_descriptor,
+        new java.lang.String[] { "DateCreation", });
+    internal_static_SearchComptesByDateResponse_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_SearchComptesByDateResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_SearchComptesByDateResponse_descriptor,
+        new java.lang.String[] { "Comptes", });
+    internal_static_GetSummaryRequest_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_GetSummaryRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_GetSummaryRequest_descriptor,
+        new java.lang.String[] { });
+    internal_static_TypeCompteSummary_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_TypeCompteSummary_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_TypeCompteSummary_descriptor,
+        new java.lang.String[] { "Type", "Count", });
+    internal_static_GetSummaryResponse_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_GetSummaryResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_GetSummaryResponse_descriptor,
+        new java.lang.String[] { "Summaries", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

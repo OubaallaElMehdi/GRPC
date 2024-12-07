@@ -89,8 +89,29 @@ message GetComptesByTypeRequest {
 message GetComptesByTypeResponse {
   repeated Compte comptes = 1; // List of comptes of the specified type
 }
+// Search for accounts by date of creation
+message SearchComptesByDateRequest {
+  string dateCreation = 1;
+}
 
+message SearchComptesByDateResponse {
+  repeated Compte comptes = 1;
+}
+
+// Get summary grouped by TypeCompte
+message GetSummaryRequest {}
+
+message TypeCompteSummary {
+  TypeCompte type = 1;
+  int32 count = 2;
+}
+
+message GetSummaryResponse {
+  repeated TypeCompteSummary summaries = 1;
+}
 service CompteService {
+  rpc SearchComptesByDate(SearchComptesByDateRequest) returns (SearchComptesByDateResponse);
+  rpc GetSummary(GetSummaryRequest) returns (GetSummaryResponse);
   rpc AllComptes(GetAllComptesRequest) returns (GetAllComptesResponse);
   rpc CompteById(GetCompteByIdRequest) returns (GetCompteByIdResponse);
   rpc TotalSolde(GetTotalSoldeRequest) returns (GetTotalSoldeResponse);
